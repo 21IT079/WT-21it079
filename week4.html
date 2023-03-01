@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h1>Spoural form detail</h1>
+<table id="t"></table>
+<button id="show" >Show</button>
+<style>
+table,tr,td{
+border: 2px solid pink;
+}
+</style>
+<script>
+let srui = {
+name: "sujal",
+branch: "IT",
+id: "21IT079",
+sem: '4th',
+}
+let tbl = document.getElementById("t");
+function het() {
+Object.entries(srui).forEach(([key, value]) => {
+var tr = document.createElement('tr');
+var td = document.createElement('td');
+td.innerHTML = key;
+tr.appendChild(td);
+tbl.appendChild(tr);
+td = document.createElement('td');
+td.innerHTML = value;
+tr.appendChild(td);
+tbl.appendChild(tr);
+});
+}
+let btn = document.getElementById('show');
+btn.onclick = () => {
+het()
+}
+</script>
+</body>
+</html>
